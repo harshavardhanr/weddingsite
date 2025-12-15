@@ -78,19 +78,19 @@
             <p class="rsvp-deadline">Please RSVP by April 1st, 2026</p>
             <form class="contact-form" id="rsvp-form">
                 <div class="form-row">
-                    <input type="text" placeholder="Your Name" class="form-input" required>
-                    <input type="email" placeholder="Your Email" class="form-input" required>
+                    <input type="text" name="name" id="name" placeholder="Your Name" class="form-input" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-input" required>
                 </div>
                 <div class="form-row">
-                    <select class="form-input form-select" required>
+                    <select name="attending" id="attending" class="form-input form-select" required>
                         <option value="">Will you attend?</option>
-                        <option value="yes">Joyfully Accept</option>
-                        <option value="no">Regretfully Decline</option>
+                        <option value="Joyfully Accept">Joyfully Accept</option>
+                        <option value="Regretfully Decline">Regretfully Decline</option>
                     </select>
-                    <input type="number" placeholder="Number of Guests" class="form-input" min="1" max="5">
+                    <input type="number" name="guests" id="guests" placeholder="Number of Guests" class="form-input" min="1" max="5">
                 </div>
-                <textarea placeholder="Dietary restrictions or special notes..." class="form-textarea"></textarea>
-                <button type="submit" class="submit-btn">SEND RSVP</button>
+                <textarea name="notes" id="notes" placeholder="Dietary restrictions or special notes..." class="form-textarea"></textarea>
+                <button type="submit" class="submit-btn" id="submit-btn">SEND RSVP</button>
             </form>
         </div>
         <div class="rsvp-decoration">
@@ -217,11 +217,48 @@
             observer.observe(el);
         });
 
-        // Form submission handler
-        document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+        // Google Sheets RSVP Form Handler
+        // Replace this URL with your Google Apps Script Web App URL
+        const GOOGLE_SHEETS_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+        document.getElementById('rsvp-form').addEventListener('submit', async function(e) {
             e.preventDefault();
-            alert('Thank you for your RSVP! We will be in touch soon.');
-            this.reset();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'SENDING...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                attending: document.getElementById('attending').value,
+                guests: document.getElementById('guests').value || '1',
+                notes: document.getElementById('notes').value || '',
+                timestamp: new Date().toISOString()
+            };
+
+            try {
+                const response = await fetch(GOOGLE_SHEETS_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                // Since we're using no-cors, we can't read the response
+                // but the request will still go through
+                alert('Thank you for your RSVP! We will be in touch soon.');
+                this.reset();
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting your RSVP. Please try again or contact us directly.');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
         });
     </script>
 </body>
