@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enchanted Weddings - Creating The Best Day Ever</title>
+    <title>Anna & Harsha - May 4th, 2026</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,26 +26,43 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <span class="logo-text">ENCHANTED</span>
-            <span class="logo-subtext">WEDDINGS</span>
+            <span class="logo-text">A & H</span>
         </div>
         <nav class="nav">
             <a href="#home" class="nav-link active">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#blog" class="nav-link">Blog</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#story" class="nav-link">Our Story</a>
+            <a href="#details" class="nav-link">The Wedding</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#rsvp" class="nav-link">RSVP</a>
         </nav>
-        <a href="#book" class="book-btn">BOOK</a>
+        <a href="#rsvp" class="book-btn">RSVP</a>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <span class="hero-tagline">LIFE IS AN EVENT</span>
-            <h1 class="hero-title">CREATING THE<br>BEST DAY EVER</h1>
-            <p class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue ultrices, in tempus elit tristique. Aliquam ultrices sem non.</p>
-            <a href="#services" class="explore-btn">EXPLORE</a>
+            <span class="hero-tagline">WE'RE GETTING MARRIED!</span>
+            <h1 class="hero-title">ANNA<br><span class="ampersand">&</span><br>HARSHA</h1>
+            <p class="hero-date">May 4th, 2026</p>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">---</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">--</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">--</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">--</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <a href="#rsvp" class="explore-btn">RSVP NOW</a>
         </div>
         <div class="hero-image-container">
             <div class="hero-wreath">
@@ -73,7 +90,7 @@
                 </svg>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=700&fit=crop" alt="Wedding couple with bouquet">
+                <img src="images/anna-harsha.jpg" alt="Anna and Harsha">
             </div>
             <div class="confetti">
                 <span></span><span></span><span></span><span></span><span></span>
@@ -82,14 +99,11 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Our Story Section -->
+    <section id="story" class="about">
         <div class="about-images">
             <div class="about-image-main">
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500&h=600&fit=crop" alt="Wedding ceremony setup">
-            </div>
-            <div class="about-image-secondary">
-                <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=350&h=400&fit=crop" alt="Wedding cake">
+                <img src="images/anna-harsha.jpg" alt="Anna and Harsha together">
             </div>
             <div class="about-decoration">
                 <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,10 +118,14 @@
             </div>
         </div>
         <div class="about-content">
-            <span class="about-tagline">WE CREATE . YOU CELEBRATE</span>
-            <h2 class="about-title">WE BUILD YOUR<br>DREAM AROUND YOU</h2>
-            <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam mi id augue ultrices, in tempus elit tristique. Aliquam ultrices sem non.</p>
-            <a href="#services" class="explore-btn">EXPLORE</a>
+            <span class="about-tagline">HOW IT ALL BEGAN</span>
+            <h2 class="about-title">OUR LOVE<br>STORY</h2>
+            <p class="about-description">From the moment we met, we knew there was something special between us. Through laughter, adventures, and countless beautiful moments, our love has grown into something we want to celebrate with all of you.</p>
+            <p class="about-description">We can't wait to share our special day with the people who mean the most to us.</p>
+            <div class="love-quote">
+                <span class="quote-mark">"</span>
+                <p>Every love story is beautiful, but ours is our favorite.</p>
+            </div>
         </div>
         <div class="about-decoration-left">
             <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,54 +140,78 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Wedding Details Section -->
+    <section id="details" class="services">
         <div class="services-header">
-            <span class="services-tagline">WHAT WE OFFER</span>
-            <h2 class="services-title">OUR SERVICES</h2>
+            <span class="services-tagline">JOIN US ON OUR SPECIAL DAY</span>
+            <h2 class="services-title">THE WEDDING</h2>
         </div>
-        <div class="services-grid">
+        <div class="wedding-date-banner">
+            <div class="date-icon">
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="15" width="40" height="35" rx="3" stroke="#D4A574" stroke-width="1.5"/>
+                    <path d="M10 25 L50 25" stroke="#D4A574" stroke-width="1.5"/>
+                    <path d="M20 10 L20 20" stroke="#D4A574" stroke-width="1.5"/>
+                    <path d="M40 10 L40 20" stroke="#D4A574" stroke-width="1.5"/>
+                    <text x="30" y="42" text-anchor="middle" fill="#D4A574" font-size="14" font-family="serif">4</text>
+                </svg>
+            </div>
+            <div class="date-text">
+                <span class="day-name">Monday</span>
+                <span class="full-date">May 4th, 2026</span>
+            </div>
+        </div>
+        <div class="services-grid details-grid">
             <div class="service-card">
                 <div class="service-icon">
                     <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="30" cy="30" r="28" stroke="#D4A574" stroke-width="1"/>
-                        <path d="M30 15 L30 45 M20 25 L30 15 L40 25" stroke="#D4A574" stroke-width="1.5"/>
+                        <path d="M30 15 C20 15, 15 25, 15 30 C15 40, 30 50, 30 50 C30 50, 45 40, 45 30 C45 25, 40 15, 30 15" stroke="#D4A574" stroke-width="1.5" fill="none"/>
+                        <path d="M30 15 C25 20, 25 25, 30 30 C35 25, 35 20, 30 15" stroke="#D4A574" stroke-width="1"/>
                     </svg>
                 </div>
-                <h3 class="service-title">Full Planning</h3>
-                <p class="service-description">From concept to execution, we handle every detail of your special day.</p>
+                <h3 class="service-title">Ceremony</h3>
+                <p class="service-time">3:00 PM</p>
+                <p class="service-description">Join us as we exchange vows and begin our journey as husband and wife.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="30" cy="30" r="28" stroke="#D4A574" stroke-width="1"/>
-                        <rect x="18" y="20" width="24" height="20" rx="2" stroke="#D4A574" stroke-width="1.5"/>
-                        <path d="M18 26 L30 34 L42 26" stroke="#D4A574" stroke-width="1.5"/>
+                        <ellipse cx="30" cy="35" rx="15" ry="10" stroke="#D4A574" stroke-width="1.5"/>
+                        <path d="M20 30 Q25 20, 30 25 Q35 20, 40 30" stroke="#D4A574" stroke-width="1.5"/>
+                        <circle cx="30" cy="22" r="3" stroke="#D4A574" stroke-width="1"/>
                     </svg>
                 </div>
-                <h3 class="service-title">Day Coordination</h3>
-                <p class="service-description">Ensuring your wedding day runs smoothly while you enjoy every moment.</p>
+                <h3 class="service-title">Cocktail Hour</h3>
+                <p class="service-time">4:00 PM</p>
+                <p class="service-description">Celebrate with drinks and hors d'oeuvres while we capture photos.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="30" cy="30" r="28" stroke="#D4A574" stroke-width="1"/>
-                        <path d="M20 40 L30 20 L40 40 Z" stroke="#D4A574" stroke-width="1.5" fill="none"/>
-                        <circle cx="30" cy="32" r="4" stroke="#D4A574" stroke-width="1.5"/>
+                        <rect x="18" y="28" width="24" height="16" rx="2" stroke="#D4A574" stroke-width="1.5"/>
+                        <path d="M22 28 L22 24 Q30 18 38 24 L38 28" stroke="#D4A574" stroke-width="1.5"/>
+                        <line x1="18" y1="34" x2="42" y2="34" stroke="#D4A574" stroke-width="1"/>
                     </svg>
                 </div>
-                <h3 class="service-title">Design & Styling</h3>
-                <p class="service-description">Creating a cohesive aesthetic that reflects your unique love story.</p>
+                <h3 class="service-title">Reception</h3>
+                <p class="service-time">5:00 PM</p>
+                <p class="service-description">Dinner, dancing, and celebration! Let's party the night away together.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="30" cy="30" r="28" stroke="#D4A574" stroke-width="1"/>
-                        <path d="M22 30 C22 24, 30 18, 30 18 C30 18, 38 24, 38 30 C38 36, 30 42, 30 42 C30 42, 22 36, 22 30" stroke="#D4A574" stroke-width="1.5"/>
+                        <path d="M20 40 L30 20 L40 40" stroke="#D4A574" stroke-width="1.5" fill="none"/>
+                        <circle cx="30" cy="35" r="5" stroke="#D4A574" stroke-width="1.5"/>
+                        <circle cx="30" cy="35" r="2" fill="#D4A574"/>
                     </svg>
                 </div>
-                <h3 class="service-title">Floral Design</h3>
-                <p class="service-description">Stunning arrangements that bring your vision to life with natural beauty.</p>
+                <h3 class="service-title">Venue</h3>
+                <p class="service-time">Details Coming Soon</p>
+                <p class="service-description">Stay tuned for venue information and directions.</p>
             </div>
         </div>
     </section>
@@ -177,63 +219,82 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="gallery-header">
-            <span class="gallery-tagline">OUR PORTFOLIO</span>
-            <h2 class="gallery-title">CAPTURED MOMENTS</h2>
+            <span class="gallery-tagline">OUR JOURNEY TOGETHER</span>
+            <h2 class="gallery-title">MOMENTS TO REMEMBER</h2>
         </div>
-        <div class="gallery-grid">
+        <div class="gallery-grid couple-gallery">
             <div class="gallery-item large">
-                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=800&fit=crop" alt="Wedding ceremony">
+                <img src="images/anna-harsha.jpg" alt="Anna and Harsha">
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop" alt="Wedding rings">
+                <img src="images/anna-harsha.jpg" alt="Anna and Harsha">
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=400&fit=crop" alt="Wedding flowers">
+                <img src="images/anna-harsha.jpg" alt="Anna and Harsha">
             </div>
             <div class="gallery-item wide">
-                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&h=400&fit=crop" alt="Wedding venue">
+                <img src="images/anna-harsha.jpg" alt="Anna and Harsha">
             </div>
+        </div>
+        <p class="gallery-note">More photos coming soon!</p>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="contact rsvp-section">
+        <div class="contact-content">
+            <span class="contact-tagline">WE HOPE YOU CAN MAKE IT</span>
+            <h2 class="contact-title">KINDLY<br>RESPOND</h2>
+            <p class="contact-description">Please let us know if you'll be joining us on our special day. We can't wait to celebrate with you!</p>
+            <p class="rsvp-deadline">Please RSVP by April 1st, 2026</p>
+            <form class="contact-form" id="rsvp-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name" class="form-input" required>
+                    <input type="email" placeholder="Your Email" class="form-input" required>
+                </div>
+                <div class="form-row">
+                    <select class="form-input form-select" required>
+                        <option value="">Will you attend?</option>
+                        <option value="yes">Joyfully Accept</option>
+                        <option value="no">Regretfully Decline</option>
+                    </select>
+                    <input type="number" placeholder="Number of Guests" class="form-input" min="1" max="5">
+                </div>
+                <textarea placeholder="Dietary restrictions or special notes..." class="form-textarea"></textarea>
+                <button type="submit" class="submit-btn">SEND RSVP</button>
+            </form>
+        </div>
+        <div class="rsvp-decoration">
+            <div class="hearts-decoration">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 180 C60 140, 20 100, 20 60 C20 30, 50 10, 100 50 C150 10, 180 30, 180 60 C180 100, 140 140, 100 180Z" stroke="#D4A574" stroke-width="1.5" fill="none"/>
+                    <path d="M100 140 C75 115, 50 90, 50 65 C50 45, 70 35, 100 60 C130 35, 150 45, 150 65 C150 90, 125 115, 100 140Z" stroke="#D4A574" stroke-width="1" fill="none" opacity="0.6"/>
+                </svg>
+            </div>
+            <div class="couple-initials">
+                <span>A</span>
+                <span class="heart-small">&hearts;</span>
+                <span>H</span>
+            </div>
+            <p class="save-date-text">05.04.2026</p>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <!-- Registry Section -->
+    <section id="registry" class="testimonials">
         <div class="testimonials-decoration">
             <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M50 10 Q70 30, 70 50 Q70 70, 50 90 Q30 70, 30 50 Q30 30, 50 10" stroke="#D4A574" stroke-width="1" fill="none"/>
             </svg>
         </div>
         <div class="testimonials-content">
-            <span class="testimonials-tagline">KIND WORDS</span>
-            <h2 class="testimonials-title">WHAT COUPLES SAY</h2>
-            <div class="testimonial-card">
-                <p class="testimonial-quote">"Enchanted Weddings made our dream wedding a reality. Every detail was perfect, and we couldn't have asked for a more magical day. They truly understood our vision."</p>
-                <div class="testimonial-author">
-                    <span class="author-name">Sarah & Michael</span>
-                    <span class="author-date">June 2024</span>
+            <span class="testimonials-tagline">WITH GRATITUDE</span>
+            <h2 class="testimonials-title">REGISTRY</h2>
+            <div class="testimonial-card registry-card">
+                <p class="testimonial-quote">Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we've created a small registry for your convenience.</p>
+                <div class="registry-buttons">
+                    <a href="#" class="registry-btn">View Registry</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-content">
-            <span class="contact-tagline">GET IN TOUCH</span>
-            <h2 class="contact-title">LET'S CREATE<br>YOUR STORY</h2>
-            <p class="contact-description">Ready to start planning your perfect day? We'd love to hear from you.</p>
-            <form class="contact-form">
-                <div class="form-row">
-                    <input type="text" placeholder="Your Name" class="form-input">
-                    <input type="email" placeholder="Your Email" class="form-input">
-                </div>
-                <input type="text" placeholder="Wedding Date" class="form-input full">
-                <textarea placeholder="Tell us about your dream wedding..." class="form-textarea"></textarea>
-                <button type="submit" class="submit-btn">SEND MESSAGE</button>
-            </form>
-        </div>
-        <div class="contact-image">
-            <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=500&h=600&fit=crop" alt="Wedding planning">
         </div>
     </section>
 
@@ -241,27 +302,49 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <span class="logo-text">ENCHANTED</span>
-                <span class="logo-subtext">WEDDINGS</span>
+                <span class="logo-text couple-names">Anna & Harsha</span>
+                <span class="logo-subtext">May 4th, 2026</span>
             </div>
             <div class="footer-links">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+                <a href="#story">Our Story</a>
+                <a href="#details">The Wedding</a>
+                <a href="#rsvp">RSVP</a>
             </div>
-            <div class="footer-social">
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Pinterest</a>
-                <a href="#" class="social-link">Facebook</a>
+            <div class="footer-message">
+                <p>#AnnaAndHarsha2026</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Enchanted Weddings. All rights reserved.</p>
+            <p>Made with love for our special day</p>
         </div>
     </footer>
 
     <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('May 4, 2026 15:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('countdown').innerHTML = '<p class="wedding-day">Today is the day!</p>';
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -303,6 +386,13 @@
         document.querySelectorAll('.service-card, .gallery-item, .about-content, .hero-content').forEach(el => {
             el.classList.add('fade-in');
             observer.observe(el);
+        });
+
+        // Form submission handler
+        document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your RSVP! We will be in touch soon.');
+            this.reset();
         });
     </script>
 </body>
