@@ -21,30 +21,42 @@
  * 7. Click "Deploy" and authorize the app
  *
  * 8. Copy the Web App URL and paste it into index.html
- *    (Replace 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE')
+ *    (Replace the GOOGLE_SHEETS_URL value)
+ *
+ * NOTE: If you update this script, you must create a NEW deployment
+ * (Deploy > New deployment) to see the changes.
  */
 
 // Handle POST requests from the RSVP form
 function doPost(e) {
   try {
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    const data = JSON.parse(e.postData.contents);
+
+    // Get form data from the request
+    const timestamp = e.parameter.timestamp || new Date().toISOString();
+    const name = e.parameter.name || '';
+    const email = e.parameter.email || '';
+    const attending = e.parameter.attending || '';
+    const guests = e.parameter.guests || '1';
+    const notes = e.parameter.notes || '';
 
     // Append the RSVP data to the sheet
     sheet.appendRow([
-      data.timestamp || new Date().toISOString(),
-      data.name,
-      data.email,
-      data.attending,
-      data.guests,
-      data.notes
+      timestamp,
+      name,
+      email,
+      attending,
+      guests,
+      notes
     ]);
 
+    // Return success response
     return ContentService
-      .createTextOutput(JSON.stringify({ success: true }))
+      .createTextOutput(JSON.stringify({ success: true, message: 'RSVP received!' }))
       .setMimeType(ContentService.MimeType.JSON);
 
   } catch (error) {
+    // Return error response
     return ContentService
       .createTextOutput(JSON.stringify({ success: false, error: error.message }))
       .setMimeType(ContentService.MimeType.JSON);
@@ -54,6 +66,6 @@ function doPost(e) {
 // Handle GET requests (for testing)
 function doGet(e) {
   return ContentService
-    .createTextOutput("Wedding RSVP API is running!")
+    .createTextOutput("Wedding RSVP API is running! Use POST to submit RSVPs.")
     .setMimeType(ContentService.MimeType.TEXT);
 }

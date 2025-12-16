@@ -228,27 +228,21 @@
             submitBtn.textContent = 'SENDING...';
             submitBtn.disabled = true;
 
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                attending: document.getElementById('attending').value,
-                guests: document.getElementById('guests').value || '1',
-                notes: document.getElementById('notes').value || '',
-                timestamp: new Date().toISOString()
-            };
+            // Create form data for Google Apps Script
+            const formData = new FormData();
+            formData.append('name', document.getElementById('name').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('attending', document.getElementById('attending').value);
+            formData.append('guests', document.getElementById('guests').value || '1');
+            formData.append('notes', document.getElementById('notes').value || '');
+            formData.append('timestamp', new Date().toISOString());
 
             try {
-                const response = await fetch(GOOGLE_SHEETS_URL, {
+                await fetch(GOOGLE_SHEETS_URL, {
                     method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
+                    body: formData
                 });
 
-                // Since we're using no-cors, we can't read the response
-                // but the request will still go through
                 alert('Thank you for your RSVP! We will be in touch soon.');
                 this.reset();
             } catch (error) {
