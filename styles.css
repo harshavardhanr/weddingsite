@@ -1078,6 +1078,31 @@ section.details-section .details-title {
     margin-bottom: 50px;
 }
 
+section.details-section .event-block {
+    margin-bottom: 50px;
+}
+
+section.details-section .event-block:last-child {
+    margin-bottom: 0;
+}
+
+section.details-section .event-heading {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--color-heading);
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+}
+
+section.details-section .event-date {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
 section.details-section .details-content {
     display: flex;
     flex-direction: row;
@@ -1093,6 +1118,11 @@ section.details-section .details-content {
 section.details-section .detail-item {
     flex: 1;
     text-align: center;
+}
+
+section.details-section .detail-item-full {
+    flex: none;
+    width: 100%;
 }
 
 section.details-section .detail-label {
