@@ -1288,6 +1288,7 @@ section.details-section .detail-divider {
 /* Event Selection Radio Buttons */
 .event-selection {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .event-selection-label {
@@ -1296,14 +1297,18 @@ section.details-section .detail-divider {
     color: var(--color-text);
     margin-bottom: 15px;
     font-style: italic;
-}
-
-.radio-group {
     display: block;
 }
 
-.radio-option {
+.radio-group {
     display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+label.radio-option {
+    display: flex !important;
     align-items: center;
     cursor: pointer;
     padding: 12px 16px;
@@ -1311,21 +1316,19 @@ section.details-section .detail-divider {
     border-radius: 4px;
     transition: all 0.3s ease;
     background-color: transparent;
-    margin-bottom: 12px;
     width: 100%;
+    box-sizing: border-box;
 }
 
-.radio-option:last-child {
-    margin-bottom: 0;
-}
-
-.radio-option:hover {
+label.radio-option:hover {
     background-color: rgba(201, 168, 108, 0.1);
 }
 
 .radio-option input[type="radio"] {
     position: absolute;
     opacity: 0;
+    width: 0;
+    height: 0;
     cursor: pointer;
 }
 
