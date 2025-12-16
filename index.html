@@ -114,20 +114,32 @@
                     <input type="text" name="name" id="name" placeholder="Your Name" class="form-input" required>
                     <input type="email" name="email" id="email" placeholder="Your Email" class="form-input" required>
                 </div>
+                <div class="event-selection">
+                    <p class="event-selection-label">Which celebration?</p>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="event" value="London - 4th May 2026" required>
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">London - 4th May 2026</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="event" value="Bangalore - 30th October 2026">
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Bangalore - 30th October 2026</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="event" value="Both Celebrations">
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Both Celebrations</span>
+                        </label>
+                    </div>
+                </div>
                 <div class="form-row">
-                    <select name="event" id="event" class="form-input form-select" required>
-                        <option value="">Which celebration?</option>
-                        <option value="London - 4th May 2026">London - 4th May 2026</option>
-                        <option value="Bangalore - 30th October 2026">Bangalore - 30th October 2026</option>
-                        <option value="Both Celebrations">Both Celebrations</option>
-                    </select>
                     <select name="attending" id="attending" class="form-input form-select" required>
                         <option value="">Will you attend?</option>
                         <option value="Joyfully Accept">Joyfully Accept</option>
                         <option value="Regretfully Decline">Regretfully Decline</option>
                     </select>
-                </div>
-                <div class="form-row">
                     <input type="number" name="guests" id="guests" placeholder="Number of Guests" class="form-input" min="1" max="5">
                 </div>
                 <textarea name="notes" id="notes" placeholder="Dietary restrictions or special notes..." class="form-textarea"></textarea>
@@ -271,7 +283,7 @@
             const formData = new FormData();
             formData.append('name', document.getElementById('name').value);
             formData.append('email', document.getElementById('email').value);
-            formData.append('event', document.getElementById('event').value);
+            formData.append('event', document.querySelector('input[name="event"]:checked').value);
             formData.append('attending', document.getElementById('attending').value);
             formData.append('guests', document.getElementById('guests').value || '1');
             formData.append('notes', document.getElementById('notes').value || '');
