@@ -1119,6 +1119,18 @@ section.details-section .detail-venue {
     margin-bottom: 5px;
 }
 
+section.details-section .venue-link {
+    color: var(--color-heading);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+section.details-section .venue-link:hover {
+    color: var(--color-gold);
+    border-bottom-color: var(--color-gold);
+}
+
 section.details-section .detail-location {
     font-size: 0.9rem;
     color: var(--color-text-light);
