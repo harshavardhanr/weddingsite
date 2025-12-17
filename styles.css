@@ -1059,15 +1059,16 @@ section.details-section .details-container {
 
 section.details-section .details-main-title {
     font-family: var(--font-serif);
-    font-size: 2.2rem;
-    font-weight: 400;
-    color: var(--color-heading);
-    letter-spacing: 0.05em;
-    margin-bottom: 50px;
-    line-height: 1.4;
-    max-width: 600px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 60px;
+    line-height: 1.6;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    text-transform: uppercase;
 }
 
 section.details-section .event-block {
