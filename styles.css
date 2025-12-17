@@ -1307,6 +1307,16 @@ section.details-section .detail-divider {
     width: 100%;
 }
 
+.radio-group-inline {
+    flex-direction: row;
+    gap: 15px;
+}
+
+.radio-group-inline .radio-option {
+    flex: 1;
+    justify-content: center;
+}
+
 label.radio-option {
     display: flex !important;
     align-items: center;

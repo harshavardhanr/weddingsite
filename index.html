@@ -139,8 +139,20 @@
                         </label>
                     </div>
                 </div>
-                <div class="form-row">
-                    <input type="number" name="guests" id="guests" placeholder="Number of Guests" class="form-input" min="1" max="5">
+                <div class="event-selection">
+                    <p class="event-selection-label">Bringing a plus one?</p>
+                    <div class="radio-group radio-group-inline">
+                        <label class="radio-option">
+                            <input type="radio" name="plusone" value="Yes" required>
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="plusone" value="No">
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">No</span>
+                        </label>
+                    </div>
                 </div>
                 <textarea name="notes" id="notes" placeholder="Dietary restrictions or special notes..." class="form-textarea"></textarea>
                 <button type="submit" class="submit-btn" id="submit-btn">SEND RSVP</button>
@@ -284,7 +296,7 @@
             formData.append('name', document.getElementById('name').value);
             formData.append('email', document.getElementById('email').value);
             formData.append('event', document.querySelector('input[name="event"]:checked').value);
-            formData.append('guests', document.getElementById('guests').value || '1');
+            formData.append('plusone', document.querySelector('input[name="plusone"]:checked').value);
             formData.append('notes', document.getElementById('notes').value || '');
             formData.append('timestamp', new Date().toISOString());
 
