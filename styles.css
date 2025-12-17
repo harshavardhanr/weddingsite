@@ -14,6 +14,17 @@
     --font-sans: 'Montserrat', Arial, sans-serif;
 }
 
+/* ===== Bird Animation Canvas ===== */
+#birds-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
     margin: 0;
@@ -31,6 +42,12 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+}
+
+body > *:not(#birds-canvas) {
+    position: relative;
+    z-index: 2;
 }
 
 img {
