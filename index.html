@@ -132,14 +132,14 @@
                             <span class="radio-custom"></span>
                             <span class="radio-text">Both Celebrations</span>
                         </label>
+                        <label class="radio-option">
+                            <input type="radio" name="event" value="Regretfully Decline">
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Regretfully Decline</span>
+                        </label>
                     </div>
                 </div>
                 <div class="form-row">
-                    <select name="attending" id="attending" class="form-input form-select" required>
-                        <option value="">Will you attend?</option>
-                        <option value="Joyfully Accept">Joyfully Accept</option>
-                        <option value="Regretfully Decline">Regretfully Decline</option>
-                    </select>
                     <input type="number" name="guests" id="guests" placeholder="Number of Guests" class="form-input" min="1" max="5">
                 </div>
                 <textarea name="notes" id="notes" placeholder="Dietary restrictions or special notes..." class="form-textarea"></textarea>
@@ -284,7 +284,6 @@
             formData.append('name', document.getElementById('name').value);
             formData.append('email', document.getElementById('email').value);
             formData.append('event', document.querySelector('input[name="event"]:checked').value);
-            formData.append('attending', document.getElementById('attending').value);
             formData.append('guests', document.getElementById('guests').value || '1');
             formData.append('notes', document.getElementById('notes').value || '');
             formData.append('timestamp', new Date().toISOString());
