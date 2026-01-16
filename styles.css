@@ -238,22 +238,21 @@ a {
 /* Decorative Leaves */
 .leaf-decoration {
     position: absolute;
-    width: 180px;
+    width: 200px;
     height: auto;
     z-index: 3;
     pointer-events: none;
 }
 
 .leaf-top-right {
-    top: -20px;
-    right: -30px;
-    transform: rotate(0deg);
+    top: -40px;
+    right: -50px;
 }
 
 .leaf-bottom-left {
-    bottom: -20px;
-    left: -30px;
-    transform: rotate(0deg);
+    bottom: -40px;
+    left: -50px;
+    transform: scaleX(-1) scaleY(-1);
 }
 
 /* ===== About Section ===== */
