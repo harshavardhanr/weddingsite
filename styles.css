@@ -222,12 +222,12 @@ a {
     width: 100%;
     max-width: 900px;
     height: 550px;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     z-index: 2;
 }
 
-.hero-image img {
+.hero-image > img:not(.leaf-decoration) {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -238,20 +238,20 @@ a {
 /* Decorative Leaves */
 .leaf-decoration {
     position: absolute;
-    width: 200px;
+    width: 180px;
     height: auto;
-    z-index: 3;
+    z-index: 10;
     pointer-events: none;
 }
 
 .leaf-top-right {
-    top: -40px;
-    right: -50px;
+    top: -20px;
+    right: 0;
 }
 
 .leaf-bottom-left {
-    bottom: -40px;
-    left: -50px;
+    bottom: -20px;
+    left: 0;
     transform: scaleX(-1) scaleY(-1);
 }
 
