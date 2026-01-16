@@ -811,6 +811,10 @@ a {
         height: 400px;
     }
 
+    .leaf-decoration {
+        width: 180px;
+    }
+
     .about {
         flex-direction: column;
         padding: 80px 30px;
@@ -917,6 +921,10 @@ a {
         justify-content: center;
         gap: 20px;
     }
+
+    .leaf-decoration {
+        width: 140px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -961,6 +969,10 @@ a {
 
     .footer {
         padding: 40px 20px;
+    }
+
+    .leaf-decoration {
+        width: 100px;
     }
 }
 
