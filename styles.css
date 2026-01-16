@@ -238,7 +238,7 @@ a {
 /* Decorative Leaves */
 .leaf-decoration {
     position: absolute;
-    width: 180px;
+    width: 252px;
     height: auto;
     z-index: 10;
     pointer-events: none;
