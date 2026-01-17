@@ -1480,8 +1480,8 @@ label.radio-option:hover {
 
 .registry-decoration {
     position: absolute;
-    top: -50px;
-    left: -80px;
+    top: -30px;
+    left: -50px;
     width: 150px;
     height: auto;
     pointer-events: none;
