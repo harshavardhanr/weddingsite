@@ -1154,13 +1154,12 @@ section.details-section .details-content {
 .details-decoration-right {
     bottom: -50px;
     right: -50px;
-    transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1);
 }
 
 .details-decoration-left {
     bottom: -50px;
     left: -50px;
-    transform: scaleY(-1);
 }
 
 section.details-section .detail-item {
