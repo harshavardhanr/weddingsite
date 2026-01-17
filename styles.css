@@ -199,7 +199,7 @@ a {
     color: var(--color-text);
     padding: 15px 40px;
     border: 1px solid var(--color-text-light);
-    border-radius: 0;
+    border-radius: 25px;
     transition: all 0.3s ease;
 }
 
