@@ -1139,6 +1139,27 @@ section.details-section .details-content {
     padding: 50px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
+    position: relative;
+    overflow: visible;
+}
+
+.details-decoration {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.details-decoration-right {
+    bottom: -40px;
+    right: -60px;
+}
+
+.details-decoration-left {
+    bottom: -40px;
+    left: -60px;
+    transform: scaleX(-1);
 }
 
 section.details-section .detail-item {
