@@ -1152,7 +1152,7 @@ section.details-section .details-content {
 }
 
 .details-decoration-right {
-    bottom: -50px;
+    bottom: -20px;
     right: -50px;
     transform: scaleX(-1);
 }
