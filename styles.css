@@ -955,7 +955,8 @@ a {
     }
 
     .hero-image-container {
-        overflow: hidden;
+        overflow-x: clip;
+        overflow-y: visible;
     }
 
     .details-section {
