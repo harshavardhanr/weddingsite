@@ -23,6 +23,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -31,6 +32,8 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 img {
@@ -938,6 +941,19 @@ a {
 
     .hero {
         padding: 100px 20px 40px;
+        overflow-x: hidden;
+    }
+
+    .hero-image-container {
+        overflow: hidden;
+    }
+
+    .details-section {
+        overflow-x: hidden;
+    }
+
+    .testimonials {
+        overflow-x: hidden;
     }
 
     .hero-title {
@@ -973,6 +989,23 @@ a {
 
     .leaf-decoration {
         width: 100px;
+    }
+
+    .details-decoration {
+        width: 70px;
+    }
+
+    .details-decoration-right {
+        right: -20px;
+    }
+
+    .details-decoration-left {
+        left: -20px;
+    }
+
+    .registry-decoration {
+        width: 100px;
+        left: -20px;
     }
 }
 
