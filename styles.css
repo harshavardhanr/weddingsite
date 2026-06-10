@@ -809,6 +809,14 @@ a {
         margin-bottom: 50px;
     }
 
+    .hero-content .countdown {
+        justify-content: center;
+    }
+
+    .hero-content .countdown-item {
+        align-items: center;
+    }
+
     .hero-title {
         font-size: 2.8rem;
     }
@@ -1066,13 +1074,13 @@ a {
     display: flex;
     gap: 30px;
     margin-bottom: 40px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .countdown-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .countdown-number {
@@ -1595,41 +1603,58 @@ label.radio-option:hover {
 .london-gallery-section {
     padding: 100px 60px;
     background-color: var(--color-cream);
-    text-align: center;
 }
 
-.london-gallery-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.london-gallery-content .contact-title {
+.london-gallery-header {
+    max-width: 500px;
     margin-bottom: 50px;
+}
+
+.london-gallery-header .contact-title {
+    margin-bottom: 0;
+}
+
+.carousel-wrapper {
+    width: 100%;
 }
 
 .carousel {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .carousel-viewport {
     flex: 1;
     overflow: hidden;
-    border-radius: 4px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    min-width: 0;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease;
+    gap: 20px;
+    align-items: center;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
 }
 
 .carousel-slide {
-    flex: 0 0 100%;
+    flex: 0 0 68%;
     aspect-ratio: 4 / 3;
     overflow: hidden;
+    border-radius: 4px;
+    opacity: 0.4;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .carousel-slide img {
@@ -1637,6 +1662,7 @@ label.radio-option:hover {
     height: 100%;
     object-fit: cover;
     filter: sepia(15%) saturate(95%);
+    pointer-events: none;
 }
 
 .carousel-btn {
@@ -1687,9 +1713,22 @@ label.radio-option:hover {
     background-color: var(--color-gold);
 }
 
+@media (max-width: 992px) {
+    .london-gallery-header {
+        max-width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .london-gallery-section {
         padding: 60px 20px;
+    }
+
+    .carousel-slide {
+        flex: 0 0 82%;
     }
 
     .carousel-btn {
