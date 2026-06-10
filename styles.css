@@ -1633,6 +1633,20 @@ section.details-section .detail-description {
     margin-bottom: 0;
 }
 
+.london-gallery-title {
+    font-size: 2.8rem;
+    letter-spacing: 0.08em;
+}
+
+.london-gallery-title .title-line {
+    display: block;
+    line-height: 1.25;
+}
+
+.london-gallery-title .title-line:first-child {
+    white-space: nowrap;
+}
+
 .carousel-wrapper {
     width: 100%;
 }
@@ -1663,7 +1677,7 @@ section.details-section .detail-description {
 .carousel-slide {
     flex: 0 0 var(--slide-width, 280px);
     width: var(--slide-width, 280px);
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 4px;
     opacity: 0.4;
@@ -1737,17 +1751,56 @@ section.details-section .detail-description {
 
 @media (max-width: 768px) {
     .london-gallery-section {
-        padding: 60px 20px;
+        padding: 60px 16px;
+    }
+
+    .london-gallery-header {
+        max-width: 100%;
+    }
+
+    .london-gallery-title {
+        font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    }
+
+    .carousel {
+        gap: 0;
+        position: relative;
     }
 
     .carousel-btn {
-        width: 36px;
-        height: 36px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 32px;
+        height: 32px;
+        background-color: rgba(250, 248, 245, 0.9);
+    }
+
+    .carousel-btn-prev {
+        left: 4px;
+    }
+
+    .carousel-btn-next {
+        right: 4px;
     }
 
     .carousel-btn svg {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .carousel-track {
+        gap: 12px;
+    }
+
+    .carousel-slide {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+
+    .carousel-slide.active {
+        transform: scale(1);
     }
 }
 

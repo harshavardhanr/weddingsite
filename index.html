@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna & Harsha - Wedding 2026</title>
-    <link rel="stylesheet" href="styles.css?v=20260610b">
+    <link rel="stylesheet" href="styles.css?v=20260610c">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -91,7 +91,10 @@
     <section id="london-gallery" class="london-gallery-section">
         <div class="london-gallery-header">
             <span class="contact-tagline">A DAY TO REMEMBER</span>
-            <h2 class="contact-title">WEDDING IN LONDON<br>ON THE 4TH OF MAY</h2>
+            <h2 class="contact-title london-gallery-title">
+                <span class="title-line">Wedding in London</span>
+                <span class="title-line">on the 4th of May</span>
+            </h2>
         </div>
         <div class="carousel-wrapper">
             <div class="carousel" id="london-carousel">
@@ -246,7 +249,7 @@
             let touchStartX = 0;
 
             function getSlideRatio() {
-                return window.innerWidth <= 768 ? 0.82 : 0.68;
+                return window.innerWidth <= 768 ? 0.92 : 0.68;
             }
 
             function layoutCarousel() {
