@@ -1164,7 +1164,11 @@ section.details-section .event-block:not(:last-child) {
 }
 
 section.details-section .event-block:last-child {
-    margin-bottom: 120px;
+    margin-bottom: 80px;
+}
+
+section.details-section .event-block:last-child .event-date {
+    margin-bottom: 50px;
 }
 
 section.details-section .event-heading {
