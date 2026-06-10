@@ -1159,7 +1159,7 @@ section.details-section .details-main-title {
     text-transform: uppercase;
 }
 
-section.details-section .event-block:first-child {
+section.details-section .event-block:not(:last-child) {
     margin-bottom: 100px;
 }
 
