@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna & Harsha - Wedding 2026</title>
-    <link rel="stylesheet" href="styles.css?v=20260610c">
+    <link rel="stylesheet" href="styles.css?v=20260610d">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -247,36 +247,54 @@
             const nextBtn = carousel.querySelector('.carousel-btn-next');
             let currentIndex = 0;
             let touchStartX = 0;
+            let metrics = { slideWidth: 0, sidePadding: 0, gap: 20, viewportWidth: 0 };
 
-            function getSlideRatio() {
-                return window.innerWidth <= 768 ? 0.92 : 0.68;
+            function isMobileView() {
+                return window.innerWidth <= 768;
             }
 
             function layoutCarousel() {
-                const slideWidth = viewport.clientWidth * getSlideRatio();
-                const sidePadding = (viewport.clientWidth - slideWidth) / 2;
+                const viewportWidth = viewport.clientWidth;
+                const gap = isMobileView() ? 12 : 20;
+                const slideRatio = isMobileView() ? 0.92 : 0.68;
+                const slideWidth = viewportWidth * slideRatio;
+                const sidePadding = (viewportWidth - slideWidth) / 2;
+
+                metrics = { slideWidth, sidePadding, gap, viewportWidth };
+
+                track.style.gap = gap + 'px';
                 viewport.style.setProperty('--slide-width', slideWidth + 'px');
                 viewport.style.setProperty('--carousel-padding', sidePadding + 'px');
             }
 
+            function getOffsetForIndex(index) {
+                const { sidePadding, slideWidth, gap, viewportWidth } = metrics;
+                return sidePadding + index * (slideWidth + gap) + slideWidth / 2 - viewportWidth / 2;
+            }
+
             function updateCarousel() {
-                const slide = slides[currentIndex];
-                const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-                const viewportCenter = viewport.clientWidth / 2;
-                const offset = slideCenter - viewportCenter;
-                track.style.transform = `translateX(-${offset}px)`;
+                let offset = getOffsetForIndex(currentIndex);
+
+                if (currentIndex === 0) {
+                    offset = 0;
+                } else if (currentIndex === slides.length - 1) {
+                    offset = (slides.length - 1) * (metrics.slideWidth + metrics.gap);
+                }
+
+                track.style.transform = `translateX(-${Math.round(offset)}px)`;
                 slides.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
                 dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
             }
 
             function refreshCarousel() {
                 layoutCarousel();
-                updateCarousel();
+                requestAnimationFrame(updateCarousel);
             }
 
             function goToSlide(index) {
                 currentIndex = (index + slides.length) % slides.length;
-                updateCarousel();
+                layoutCarousel();
+                requestAnimationFrame(updateCarousel);
             }
 
             prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
@@ -295,7 +313,13 @@
                 }
             }, { passive: true });
 
+            if (window.ResizeObserver) {
+                const resizeObserver = new ResizeObserver(refreshCarousel);
+                resizeObserver.observe(viewport);
+            }
+
             window.addEventListener('resize', refreshCarousel);
+            window.addEventListener('orientationchange', refreshCarousel);
             window.addEventListener('load', refreshCarousel);
             refreshCarousel();
         })();

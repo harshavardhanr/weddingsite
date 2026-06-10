@@ -1796,11 +1796,10 @@ section.details-section .detail-description {
 
     .carousel-slide {
         opacity: 0.5;
-        transform: scale(0.95);
     }
 
     .carousel-slide.active {
-        transform: scale(1);
+        opacity: 1;
     }
 }
 
