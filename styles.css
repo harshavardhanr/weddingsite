@@ -1586,17 +1586,35 @@ label.radio-option:hover {
 /* London photos link */
 .photos-link {
     display: inline-block;
-    font-family: var(--font-serif);
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--color-gold);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease, color 0.3s ease;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    padding: 14px 36px;
+    border: 1px solid var(--color-gold);
+    border-radius: 25px;
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
 .photos-link:hover {
-    color: var(--color-heading);
-    border-bottom-color: var(--color-gold);
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: white;
+}
+
+section.details-section .detail-description {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* London Gallery Section */
