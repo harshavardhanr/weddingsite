@@ -18,7 +18,7 @@
         <nav class="nav">
             <a href="#home" class="nav-link active">Home</a>
             <a href="#details" class="nav-link">Details</a>
-            <a href="#rsvp" class="nav-link">RSVP</a>
+            <a href="#london-gallery" class="nav-link">London</a>
             <a href="#registry" class="nav-link">Gifts</a>
         </nav>
     </header>
@@ -28,7 +28,7 @@
         <div class="hero-content">
             <span class="hero-tagline">WE'RE GETTING MARRIED!</span>
             <h1 class="hero-title">ANNA<br><span class="ampersand">&</span><br>HARSHA</h1>
-            <p class="hero-date">4th May & 30th October 2026</p>
+            <p class="hero-date">Bangalore, 29th & 30th October</p>
             <div class="countdown" id="countdown">
                 <div class="countdown-item">
                     <span class="countdown-number" id="days">---</span>
@@ -47,7 +47,6 @@
                     <span class="countdown-label">Seconds</span>
                 </div>
             </div>
-            <a href="#rsvp" class="explore-btn">RSVP NOW</a>
         </div>
         <div class="hero-image-container">
             <div class="hero-image">
@@ -69,30 +68,13 @@
             <div class="event-block">
                 <h3 class="event-heading">London Celebration</h3>
                 <p class="event-date">4th May 2026</p>
-                <div class="details-content">
-                    <div class="detail-item">
-                        <h4 class="detail-label">The Ceremony</h4>
-                        <p class="detail-time">11:00 AM</p>
-                        <p class="detail-venue"><a href="https://maps.app.goo.gl/jZ7EGVJi3m3p8HrY6" target="_blank" rel="noopener" class="venue-link">Bexley Register Office</a></p>
-                        <p class="detail-location">Danson House, Kent</p>
-                    </div>
-
-                    <div class="detail-divider"></div>
-
-                    <div class="detail-item">
-                        <h4 class="detail-label">Lunch & Drinks</h4>
-                        <p class="detail-time">Afternoon</p>
-                        <p class="detail-venue"><a href="https://maps.app.goo.gl/2fHrhC9KzK1muQQm8" target="_blank" rel="noopener" class="venue-link">Mildred's</a></p>
-                        <p class="detail-location">Canary Wharf, London</p>
-                    </div>
-                    <img src="Vector2.png" alt="" class="details-decoration details-decoration-right">
-                </div>
+                <a href="#london-gallery" class="photos-link">See photos from the day</a>
             </div>
 
             <!-- Bangalore Wedding -->
             <div class="event-block">
                 <h3 class="event-heading">Bangalore Celebration</h3>
-                <p class="event-date">30th October 2026</p>
+                <p class="event-date">29th & 30th October 2026</p>
                 <div class="details-content">
                     <img src="Vector2.png" alt="" class="details-decoration details-decoration-left">
                     <div class="detail-item detail-item-full">
@@ -106,75 +88,45 @@
         </div>
     </section>
 
-    <!-- RSVP Section -->
-    <section id="rsvp" class="contact rsvp-section">
-        <div class="contact-content">
-            <span class="contact-tagline">WE HOPE YOU CAN MAKE IT</span>
-            <h2 class="contact-title">KINDLY<br>RESPOND</h2>
-            <p class="contact-description">Please let us know if you'll be joining us on our special day. We can't wait to celebrate with you!</p>
-            <p class="rsvp-deadline">Please RSVP by 1st April 2026</p>
-            <form class="contact-form" id="rsvp-form">
-                <div class="form-row">
-                    <input type="text" name="name" id="name" placeholder="Your Name" class="form-input" required>
-                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-input" required>
-                </div>
-                <div class="event-selection">
-                    <p class="event-selection-label">Which celebration?</p>
-                    <div class="radio-group">
-                        <label class="radio-option">
-                            <input type="radio" name="event" value="London - 4th May 2026" required>
-                            <span class="radio-custom"></span>
-                            <span class="radio-text">London - 4th May 2026</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="event" value="Bangalore - 30th October 2026">
-                            <span class="radio-custom"></span>
-                            <span class="radio-text">Bangalore - 30th October 2026</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="event" value="Both Celebrations">
-                            <span class="radio-custom"></span>
-                            <span class="radio-text">Both Celebrations</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="event" value="Regretfully Decline">
-                            <span class="radio-custom"></span>
-                            <span class="radio-text">Regretfully Decline</span>
-                        </label>
+    <!-- London Gallery Section -->
+    <section id="london-gallery" class="london-gallery-section">
+        <div class="london-gallery-content">
+            <span class="contact-tagline">A DAY TO REMEMBER</span>
+            <h2 class="contact-title">WEDDING IN LONDON<br>ON THE 4TH OF MAY</h2>
+            <div class="carousel" id="london-carousel">
+                <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Previous photo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg>
+                </button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="london-gallery-1.jpeg" alt="London wedding photo 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="london-gallery-2.jpeg" alt="London wedding photo 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="london-gallery-3.jpeg" alt="London wedding photo 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="london-gallery-4.jpeg" alt="London wedding photo 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="london-gallery-5.jpeg" alt="London wedding photo 5">
+                        </div>
                     </div>
                 </div>
-                <div class="event-selection">
-                    <p class="event-selection-label">Bringing a plus one?</p>
-                    <div class="radio-group radio-group-inline">
-                        <label class="radio-option">
-                            <input type="radio" name="plusone" value="Yes" required>
-                            <span class="radio-custom"></span>
-                            <span class="radio-text">Yes</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="plusone" value="No">
-                            <span class="radio-custom"></span>
-                            <span class="radio-text">No</span>
-                        </label>
-                    </div>
-                </div>
-                <textarea name="notes" id="notes" placeholder="Dietary restrictions or special notes..." class="form-textarea"></textarea>
-                <button type="submit" class="submit-btn" id="submit-btn">SEND RSVP</button>
-            </form>
-        </div>
-        <div class="rsvp-decoration">
-            <div class="hearts-decoration">
-                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M100 180 C60 140, 20 100, 20 60 C20 30, 50 10, 100 50 C150 10, 180 30, 180 60 C180 100, 140 140, 100 180Z" stroke="#D4A574" stroke-width="1.5" fill="none"/>
-                    <path d="M100 140 C75 115, 50 90, 50 65 C50 45, 70 35, 100 60 C130 35, 150 45, 150 65 C150 90, 125 115, 100 140Z" stroke="#D4A574" stroke-width="1" fill="none" opacity="0.6"/>
-                </svg>
+                <button type="button" class="carousel-btn carousel-btn-next" aria-label="Next photo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+                </button>
             </div>
-            <div class="couple-initials">
-                <span>A</span>
-                <span class="heart-small">&hearts;</span>
-                <span>H</span>
+            <div class="carousel-dots" id="carousel-dots">
+                <button type="button" class="carousel-dot active" aria-label="Photo 1" data-index="0"></button>
+                <button type="button" class="carousel-dot" aria-label="Photo 2" data-index="1"></button>
+                <button type="button" class="carousel-dot" aria-label="Photo 3" data-index="2"></button>
+                <button type="button" class="carousel-dot" aria-label="Photo 4" data-index="3"></button>
+                <button type="button" class="carousel-dot" aria-label="Photo 5" data-index="4"></button>
             </div>
-            <p class="save-date-text">2026</p>
         </div>
     </section>
 
@@ -195,12 +147,12 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <span class="logo-text couple-names">Anna & Harsha</span>
-                <span class="logo-subtext">4th May & 30th October 2026</span>
+                <span class="logo-subtext">Bangalore, 29th & 30th October</span>
             </div>
             <div class="footer-links">
                 <a href="#home">Home</a>
                 <a href="#details">Details</a>
-                <a href="#rsvp">RSVP</a>
+                <a href="#london-gallery">London</a>
                 <a href="#registry">Gifts</a>
             </div>
             <div class="footer-message">
@@ -215,7 +167,7 @@
     <script>
         // Countdown Timer
         function updateCountdown() {
-            const weddingDate = new Date('May 4, 2026 11:00:00').getTime();
+            const weddingDate = new Date('October 29, 2026 00:00:00').getTime();
             const now = new Date().getTime();
             const distance = weddingDate - now;
 
@@ -275,47 +227,43 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.hero-content').forEach(el => {
+        document.querySelectorAll('.hero-content, .london-gallery-content').forEach(el => {
             el.classList.add('fade-in');
             observer.observe(el);
         });
 
-        // Google Sheets RSVP Form Handler
-        const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzC2ZTF7OtVDiipN8mwBB5lABKJkl9XrYF_DDogIqrsHnzlzfsJvFbcFb10zOaZPzAwuQ/exec';
+        // London gallery carousel
+        (function() {
+            const carousel = document.getElementById('london-carousel');
+            const track = carousel.querySelector('.carousel-track');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = carousel.querySelector('.carousel-btn-prev');
+            const nextBtn = carousel.querySelector('.carousel-btn-next');
+            let currentIndex = 0;
+            let touchStartX = 0;
 
-        document.getElementById('rsvp-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-
-            const submitBtn = document.getElementById('submit-btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'SENDING...';
-            submitBtn.disabled = true;
-
-            // Create form data for Google Apps Script
-            const formData = new FormData();
-            formData.append('name', document.getElementById('name').value);
-            formData.append('email', document.getElementById('email').value);
-            formData.append('event', document.querySelector('input[name="event"]:checked').value);
-            formData.append('plusone', document.querySelector('input[name="plusone"]:checked').value);
-            formData.append('notes', document.getElementById('notes').value || '');
-            formData.append('timestamp', new Date().toISOString());
-
-            try {
-                await fetch(GOOGLE_SHEETS_URL, {
-                    method: 'POST',
-                    body: formData
-                });
-
-                alert('Thank you for your RSVP! We will be in touch soon.');
-                this.reset();
-            } catch (error) {
-                console.error('Error:', error);
-                alert('There was an error submitting your RSVP. Please try again or contact us directly.');
-            } finally {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
+            function goToSlide(index) {
+                currentIndex = (index + slides.length) % slides.length;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
             }
-        });
+
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+            dots.forEach(dot => dot.addEventListener('click', () => goToSlide(Number(dot.dataset.index))));
+
+            carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            carousel.addEventListener('touchend', (e) => {
+                const diff = touchStartX - e.changedTouches[0].screenX;
+                if (Math.abs(diff) > 50) {
+                    goToSlide(diff > 0 ? currentIndex + 1 : currentIndex - 1);
+                }
+            }, { passive: true });
+        })();
     </script>
 </body>
 </html>
