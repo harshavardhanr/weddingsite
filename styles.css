@@ -1135,7 +1135,7 @@ a {
 
 /* Details Section */
 section.details-section {
-    padding: 80px 60px 120px;
+    padding: 80px 60px;
     background-color: #F5F0EA;
     text-align: center;
 }
@@ -1159,8 +1159,12 @@ section.details-section .details-main-title {
     text-transform: uppercase;
 }
 
-section.details-section .event-block {
-    margin-bottom: 75px;
+section.details-section .event-block:first-child {
+    margin-bottom: 100px;
+}
+
+section.details-section .event-block:last-child {
+    margin-bottom: 120px;
 }
 
 section.details-section .event-heading {
