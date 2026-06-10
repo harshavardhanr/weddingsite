@@ -246,12 +246,30 @@
             let currentIndex = 0;
             let touchStartX = 0;
 
+            function getSlideRatio() {
+                return window.innerWidth <= 768 ? 0.82 : 0.68;
+            }
+
+            function layoutCarousel() {
+                const slideWidth = viewport.clientWidth * getSlideRatio();
+                const sidePadding = (viewport.clientWidth - slideWidth) / 2;
+                viewport.style.setProperty('--slide-width', slideWidth + 'px');
+                viewport.style.setProperty('--carousel-padding', sidePadding + 'px');
+            }
+
             function updateCarousel() {
                 const slide = slides[currentIndex];
-                const offset = slide.offsetLeft - (viewport.clientWidth - slide.offsetWidth) / 2;
+                const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+                const viewportCenter = viewport.clientWidth / 2;
+                const offset = slideCenter - viewportCenter;
                 track.style.transform = `translateX(-${offset}px)`;
                 slides.forEach((s, i) => s.classList.toggle('active', i === currentIndex));
                 dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+            }
+
+            function refreshCarousel() {
+                layoutCarousel();
+                updateCarousel();
             }
 
             function goToSlide(index) {
@@ -275,9 +293,9 @@
                 }
             }, { passive: true });
 
-            window.addEventListener('resize', updateCarousel);
-            window.addEventListener('load', updateCarousel);
-            updateCarousel();
+            window.addEventListener('resize', refreshCarousel);
+            window.addEventListener('load', refreshCarousel);
+            refreshCarousel();
         })();
     </script>
 </body>

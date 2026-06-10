@@ -1607,7 +1607,8 @@ label.radio-option:hover {
 
 .london-gallery-header {
     max-width: 500px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
+    text-align: center;
 }
 
 .london-gallery-header .contact-title {
@@ -1637,10 +1638,13 @@ label.radio-option:hover {
     align-items: center;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
+    padding-left: var(--carousel-padding, 0);
+    padding-right: var(--carousel-padding, 0);
 }
 
 .carousel-slide {
-    flex: 0 0 68%;
+    flex: 0 0 var(--slide-width, 280px);
+    width: var(--slide-width, 280px);
     aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 4px;
@@ -1713,22 +1717,9 @@ label.radio-option:hover {
     background-color: var(--color-gold);
 }
 
-@media (max-width: 992px) {
-    .london-gallery-header {
-        max-width: 100%;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 @media (max-width: 768px) {
     .london-gallery-section {
         padding: 60px 20px;
-    }
-
-    .carousel-slide {
-        flex: 0 0 82%;
     }
 
     .carousel-btn {
